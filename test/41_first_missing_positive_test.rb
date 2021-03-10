@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/first_missing_positive_41'
+require_relative '../lib/41_first_missing_positive'
 
 class FirstMissingPositiveTest < Minitest::Test
   def test_first_missing_positive

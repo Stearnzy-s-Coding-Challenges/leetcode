@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/two_sum_1'
+require_relative '../lib/1_two_sum'
 
 class TwoSumTest < Minitest::Test
   def test_two_sum

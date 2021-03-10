@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/missing_number_268'
+require_relative '../lib/268_missing_number'
 
 class MissingNumberTest < Minitest::Test
   def test_missing_number

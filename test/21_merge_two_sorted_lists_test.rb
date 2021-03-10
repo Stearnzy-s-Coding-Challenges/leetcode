@@ -5,7 +5,7 @@
 # gem 'minitest', '~> 5.2'
 # require 'minitest/autorun'
 # require 'minitest/pride'
-# require_relative '../lib/merge_two_sorted_lists_21'
+# require_relative '../lib/21_merge_two_sorted_lists'
 
 # class MergeTwoTest < Minitest::Test
 #   def test_it_exists

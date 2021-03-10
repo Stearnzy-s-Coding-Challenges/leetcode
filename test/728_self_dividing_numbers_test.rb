@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/self_dividing_numbers_728'
+require_relative '../lib/728_self_dividing_numbers'
 
 class SelfDividingNumbersTest < Minitest::Test
   def test_nums_containing_zeros_will_not_count
