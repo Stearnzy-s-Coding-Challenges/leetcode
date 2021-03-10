@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/13_roman_to_integer_'
+require_relative '../lib/13_roman_to_integer'
 
 class RomanToIngegerTest < Minitest::Test
   def test_convert_numerals
