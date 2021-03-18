@@ -32,4 +32,12 @@ class ScrambliesTest < Minitest::Test
 
     assert codex.scramble(s1, s2)
   end
+
+  def test_can_account_for_s2_with_duplicate_letters
+    codex = Scramblies.new
+    s1 = "xeltpr"
+    s2 = "tree"
+
+    assert_equal false, codex.scramble(s1, s2)
+  end
 end
