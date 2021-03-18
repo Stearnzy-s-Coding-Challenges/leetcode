@@ -5,11 +5,16 @@ class Scramblies
     s1_split = s1.split('')
     s2_split = s2.split('')
 
+    available_letters = s1_split.each_with_object(Hash.new(0)) do |letter, acc|
+      acc[letter] += 1
+    end
+
     s2_split.each do |letter|
-      if !s1_split.include?(letter)
-        return false
+      if available_letters.has_key?(letter)
+        available_letters[letter] -= 1
+        available_letters.delete(letter) if available_letters[letter] == 0
       else
-        s1_split.delete_at(s1_split.find_index(letter))
+        return false
       end
     end
 
