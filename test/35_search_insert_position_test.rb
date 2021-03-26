@@ -9,7 +9,19 @@ class SearchInsertPositionTest < Minitest::Test
     assert_instance_of SearchInsertPosition, searcher
   end
 
-  def test_
-    
+  def test_that_search_returns_index_for_existing_target
+    searcher = SearchInsertPosition.new
+    nums = [1, 2, 3]
+    target = 3
+
+    assert_equal 2, searcher.search_insert(nums, target)
+  end
+
+  def test_search_returns_index_for_missing_target
+    searcher = SearchInsertPosition.new
+    nums = [1, 3, 4]
+    target = 2
+
+    assert_equal 1, searcher.search_insert(nums, target)
   end
 end
