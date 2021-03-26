@@ -24,4 +24,28 @@ class SearchInsertPositionTest < Minitest::Test
 
     assert_equal 1, searcher.search_insert(nums, target)
   end
+
+  def test_search_returns_index_greater_than_given_array
+    searcher = SearchInsertPosition.new
+    nums = [1, 2, 3, 4]
+    target = 5
+
+    assert_equal 4, searcher.search_insert(nums, target)
+  end
+
+  def test_search_returns_index_smaller_than_given_array
+    searcher = SearchInsertPosition.new
+    nums = [1, 2, 3, 4]
+    target = 0
+
+    assert_equal 0, searcher.search_insert(nums, target)
+  end
+
+  def test_search_returns_index_when_array_is_one_element
+    searcher = SearchInsertPosition.new
+    nums = [1]
+    target = 0
+
+    assert_equal 0, searcher.search_insert(nums, target)
+  end
 end
