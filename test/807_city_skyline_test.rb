@@ -22,4 +22,11 @@ class CitySkylineTest < Minitest::Test
 
     assert_equal [9, 4, 8, 7], skyline.t_b_skyline(grid)
   end
+
+  def test_can_get_correct_answer
+    grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
+    skyline = CitySkyline.new
+
+    assert_equal 35, skyline.max_increase_keeping_skyline(grid)
+  end
 end
