@@ -17,23 +17,21 @@ class CitySkyline
     columns = grid.transpose
 
     maxed_skyline = []
-    
-    self.t_b_skyline.each do |row_unit|
-        placeholder_array = []
-        self.l_r_skyline.each do |column_unit|
-            if row_unit > column_unit
-                placeholder_array << row_unit
-            else
-                placeholder_array << column_unit
-            end
-        end
-        
-        maxed_skyline << placeholder_array
+
+    l_r_skyline(grid).each do |row_unit|
+      placeholder_array = []
+      t_b_skyline(grid).each do |column_unit|
+        placeholder_array << if row_unit < column_unit
+                               row_unit
+                             else
+                               column_unit
+                             end
+      end
+      maxed_skyline << placeholder_array
     end
-    
+
     finishing_height = maxed_skyline.flatten.sum
-    
+
     finishing_height - starting_height
-    require 'pry'; binding.pry
   end
 end
