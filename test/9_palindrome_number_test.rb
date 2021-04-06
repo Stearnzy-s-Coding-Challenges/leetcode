@@ -15,4 +15,25 @@ class PalindromeNumberTest < Minitest::Test
 
     assert_equal false, checker.is_palindrome(n)
   end
+
+  def test_it_returns_false_for_a_non_palindrome_number
+    checker = PalindromeNumber.new
+    n = 123
+
+    assert_equal false, checker.is_palindrome(n)
+  end
+
+  def test_it_returns_true_for_a_palindrome_number
+    checker = PalindromeNumber.new
+    n = 121
+
+    assert checker.is_palindrome(n)
+  end
+
+  def test_it_returns_true_for_a_single_digit_number
+    checker = PalindromeNumber.new
+    n = 1
+
+    assert checker.is_palindrome(n)
+  end
 end
