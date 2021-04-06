@@ -30,4 +30,11 @@ class LongestWordInDictionaryTest < Minitest::Test
 
     assert_equal 'apple', machine.longest_word(words)
   end
+
+  def test_it_can_find_biggest_word_in_lexicographical_order
+    machine = LongestWordInDictionary.new
+    words = ["m","mo","moc","moch","mocha","l","la","lat","latt","latte","c","ca","cat"]
+
+    assert_equal 'apple', machine.longest_word(words)
+  end
 end
