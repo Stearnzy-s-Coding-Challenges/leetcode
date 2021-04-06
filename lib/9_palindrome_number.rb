@@ -1,6 +1,10 @@
 class PalindromeNumber
-  def is_palindrome(x)
+  def is_negative(x)
     return false if x.negative?
+  end
+
+  def is_palindrome(x)
+    is_negative(x)
 
     x_split = x.to_s.split('')
 
