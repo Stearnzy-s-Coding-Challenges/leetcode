@@ -35,6 +35,6 @@ class LongestWordInDictionaryTest < Minitest::Test
     machine = LongestWordInDictionary.new
     words = ["m","mo","moc","moch","mocha","l","la","lat","latt","latte","c","ca","cat"]
 
-    assert_equal 'apple', machine.longest_word(words)
+    assert_equal 'latte', machine.longest_word(words)
   end
 end
