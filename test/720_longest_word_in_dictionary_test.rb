@@ -18,6 +18,7 @@ class LongestWordInDictionaryTest < Minitest::Test
   end
 
   def test_it_can_find_biggest_word_from_sorted_array
+    skip
     machine = LongestWordInDictionary.new
     words = ["w","wo","wor","worl", "world"]
 
@@ -36,5 +37,13 @@ class LongestWordInDictionaryTest < Minitest::Test
     words = ["m","mo","moc","moch","mocha","l","la","lat","latt","latte","c","ca","cat"]
 
     assert_equal 'latte', machine.longest_word(words)
+  end
+
+  def test_can_work_with_unsorted_gibberish_array
+    skip
+    machine = LongestWordInDictionary.new
+    words = ["yo","ew","fc","zrc","yodn","fcm","qm","qmo","fcmz","z","ewq","yod","ewqz","y"]
+
+    assert_equal 'yodn', machine.longest_word(words)
   end
 end
