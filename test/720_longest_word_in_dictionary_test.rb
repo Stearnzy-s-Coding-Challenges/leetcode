@@ -18,7 +18,6 @@ class LongestWordInDictionaryTest < Minitest::Test
   end
 
   def test_it_can_find_biggest_word_from_sorted_array
-    skip
     machine = LongestWordInDictionary.new
     words = ["w","wo","wor","worl", "world"]
 
@@ -33,6 +32,7 @@ class LongestWordInDictionaryTest < Minitest::Test
   end
 
   def test_it_can_find_biggest_word_in_lexicographical_order
+    # skip
     machine = LongestWordInDictionary.new
     words = ["m","mo","moc","moch","mocha","l","la","lat","latt","latte","c","ca","cat"]
 
@@ -40,10 +40,24 @@ class LongestWordInDictionaryTest < Minitest::Test
   end
 
   def test_can_work_with_unsorted_gibberish_array
-    skip
+    # skip
     machine = LongestWordInDictionary.new
     words = ["yo","ew","fc","zrc","yodn","fcm","qm","qmo","fcmz","z","ewq","yod","ewqz","y"]
 
     assert_equal 'yodn', machine.longest_word(words)
+  end
+
+  def test_passes_another_gibberish_array
+    machine = LongestWordInDictionary.new
+    words = ["k","lg","it","oidd","oid","oiddm","kfk","y","mw","kf","l","o","mwaqz","oi","ych","m","mwa"]
+
+    assert_equal 'oiddm', machine.longest_word(words)
+  end
+
+  def test_yet_another_gibberish_array
+    machine = LongestWordInDictionary.new
+    words = ["rac","rs","ra","on","r","otif","o","onpdu","rsf","rs","ot","oti","racy","onpd"]
+
+    assert_equal 'otif', machine.longest_word(words)
   end
 end
