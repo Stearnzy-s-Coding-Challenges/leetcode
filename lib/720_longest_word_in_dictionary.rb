@@ -12,18 +12,16 @@ class LongestWordInDictionary
         acc << word
       elsif !acc.empty? && word[0..-2] == acc.last
         acc << word
-      elsif !acc.empty? && word[0..-2] != acc.last
-        require 'pry'; binding.pry
+      elsif !acc.empty? && word[0..-2] != acc.last && word.length == 1
         possible_results << acc.last
         acc = []
         acc << word
-      elsif !acc.empty? && index == words.length - 1
+      elsif word[0..-2] == acc.last && index == words.length - 1
         possible_results << word
       end
-      require 'pry'; binding.pry
     end
 
-    possible_results << acc.last
+    possible_results << acc.last if acc.last[0..-2] == acc[-2]
 
     word_length = possible_results.max_by{|word| word.length}.length
     answer = possible_results.delete_if{|word| word.length < word_length}.sort[0]
