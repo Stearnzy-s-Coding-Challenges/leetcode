@@ -8,9 +8,7 @@ class StudentAttendanceRecordOne
       absent_record += 1 if presence == 'A'
       return false if absent_record == 2
 
-      if index >= 2 && presence == 'L' && record[index - 1] == 'L' && record[index - 2] == 'L'
-        return false
-      end
+      return false if index >= 2 && presence == 'L' && record[index - 1] == 'L' && record[index - 2] == 'L'
     end
 
     true
