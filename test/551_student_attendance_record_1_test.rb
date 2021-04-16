@@ -29,4 +29,32 @@ class StudentAttendanceRecordOneTest < Minitest::Test
 
     assert_equal false, record.check_record(attendance)
   end
+
+  def test_returns_true_if_late_once
+    record = StudentAttendanceRecordOne.new
+    attendance = 'PPLPP'
+
+    assert record.check_record(attendance)
+  end
+
+  def test_returns_true_if_late_twice
+    record = StudentAttendanceRecordOne.new
+    attendance = 'PPLLP'
+
+    assert record.check_record(attendance)
+  end
+
+  def test_returns_false_if_late_three_times_in_a_row
+    record = StudentAttendanceRecordOne.new
+    attendance = 'PPLLL'
+
+    assert_equal false, record.check_record(attendance)
+  end
+
+  def test_returns_true_if_late_three_times_in_a_row_nonconsecutively
+    record = StudentAttendanceRecordOne.new
+    attendance = 'LPLPL'
+
+    assert record.check_record(attendance)
+  end
 end
