@@ -1,0 +1,3 @@
+class StudentAttendanceRecordOne
+  
+end
