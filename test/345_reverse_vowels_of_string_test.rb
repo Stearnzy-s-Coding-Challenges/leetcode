@@ -8,4 +8,18 @@ class ReverseVowelsTest < Minitest::Test
     reverser = ReverseVowels.new
     assert_instance_of ReverseVowels, reverser
   end
+
+  def test_vowels_are_identified
+    reverser = ReverseVowels.new
+    string = 'hello'
+
+    assert_equal ['e', 'o'], reverser.find_vowels(string)
+  end
+
+  def test_vowel_finder_for_vowel_repeats
+    reverser = ReverseVowels.new
+    string = 'leetcode'
+
+    assert_equal ['e', 'e', 'o', 'e'], reverser.find_vowels(string)
+  end
 end
