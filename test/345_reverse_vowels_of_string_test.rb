@@ -29,4 +29,18 @@ class ReverseVowelsTest < Minitest::Test
 
     assert_equal ['e', 'o', 'e', 'e'], reverser.vowels_reversed(string)
   end
+
+  def test_reverse_vowels_main_method
+    reverser = ReverseVowels.new
+    string = 'hello'
+
+    assert_equal 'holle', reverser.reverse_vowels(string)
+  end
+
+  def test_reverse_vowels_main_method_with_more_complex_string
+    reverser = ReverseVowels.new
+    string = 'leetcode'
+
+    assert_equal 'leotcede', reverser.reverse_vowels(string)
+  end
 end
