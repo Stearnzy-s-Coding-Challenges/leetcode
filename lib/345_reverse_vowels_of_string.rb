@@ -9,17 +9,13 @@ class ReverseVowels
     end
   end
 
-  def vowels_reversed(string)
-    find_vowels(string).reverse
-  end
-
   def reverse_vowels(string)
-    vowels_reversed = vowels_reversed(string)
+    included_vowels = find_vowels(string)
     split_string = string.split('')
 
     split_string.map do |letter|
       if ALL_VOWELS.include?(letter)
-        vowels_reversed.shift
+        included_vowels.pop
       else
         letter
       end
