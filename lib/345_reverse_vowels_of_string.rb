@@ -1,10 +1,12 @@
 class ReverseVowels
+  ALL_VOWELS = ['a', 'e', 'i', 'o', 'u']
+
   def find_vowels(string)
-    all_vowels = ['a', 'e', 'i', 'o', 'u']
+    # all_vowels = ['a', 'e', 'i', 'o', 'u']
     letters = string.split('')
 
     letters.select do |letter|
-      all_vowels.include?(letter)
+      ALL_VOWELS.include?(letter)
     end
   end
 
@@ -13,6 +15,15 @@ class ReverseVowels
   end
 
   def reverse_vowels(string)
-    vowels_reversed = find_vowels(string).reverse
+    vowels_reversed = vowels_reversed(string)
+    split_string = string.split('')
+
+    split_string.map do |letter|
+      if ALL_VOWELS.include?(letter)
+        vowels_reversed.shift
+      else
+        letter
+      end
+    end.join('')
   end
 end
