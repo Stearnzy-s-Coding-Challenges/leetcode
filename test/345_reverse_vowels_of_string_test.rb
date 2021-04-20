@@ -43,4 +43,11 @@ class ReverseVowelsTest < Minitest::Test
 
     assert_equal 'leotcede', reverser.reverse_vowels(string)
   end
+
+  def test_reverser_works_for_capital_vowels_also
+    reverser = ReverseVowels.new
+    string = 'Aa'
+
+    assert_equal 'aA', reverser.reverse_vowels(string)
+  end
 end
