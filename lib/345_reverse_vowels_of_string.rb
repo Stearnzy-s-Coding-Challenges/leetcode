@@ -1,8 +1,7 @@
 class ReverseVowels
-  ALL_VOWELS = ['a', 'e', 'i', 'o', 'u']
+  ALL_VOWELS = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 
   def find_vowels(string)
-    # all_vowels = ['a', 'e', 'i', 'o', 'u']
     letters = string.split('')
 
     letters.select do |letter|
