@@ -7,4 +7,12 @@ class ReverseVowels
       all_vowels.include?(letter)
     end
   end
+
+  def vowels_reversed(string)
+    find_vowels(string).reverse
+  end
+
+  def reverse_vowels(string)
+    vowels_reversed = find_vowels(string).reverse
+  end
 end
