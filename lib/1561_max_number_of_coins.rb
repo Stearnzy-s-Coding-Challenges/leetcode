@@ -1,0 +1,3 @@
+class MaxCoins
+  
+end
