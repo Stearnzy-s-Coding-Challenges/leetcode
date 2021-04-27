@@ -7,14 +7,11 @@ class MaxCoins
     piles.sort!.reverse!
     turns = piles.count / 3
 
-    turns.times do
-      piles.pop
-    end
-
     count = 0
 
-    piles.each_with_index do |coins, index|
-      count += coins if index.odd?
+    turns.times do |iteration|
+      #? Pay attention to math like this
+      count += piles[iteration * 2 + 1]
     end
 
     count
